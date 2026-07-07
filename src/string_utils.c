@@ -139,6 +139,12 @@ char *my_strchr(const char *str, int ch)
         i++;
     }
 
+
+      if (index == NULL && ch == '\0')
+    {
+        index = (char*)(str + i);
+    }
+
     return index;
 }
 
