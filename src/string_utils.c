@@ -145,6 +145,7 @@ char *my_strchr(const char *str, int ch)
         index = (char*)(str + i);
     }
 
+    
     return index;
 }
 
