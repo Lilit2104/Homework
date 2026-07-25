@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "string_utils.h"
+
+
+int main()        
+{
+    int size;
+    printf("Please enter the size: ");
+    scanf("%d", &size);
+
+    char *string1= (char*)malloc((size + 1) * sizeof(char));
+    char *string2 = (char*)malloc((size + 1) * sizeof(char));
+
+
+      if(string1 == NULL  && string2 == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    
+    printf("Please enter the first string: ");
+    scanf("%s", string1);
+
+    
+    printf("Please enter the  2nd string : ");
+    scanf("%s", string2);
+
+    int n;
+    printf("Please enter the size you want to compare: ");
+    scanf("%d", &n);
+
+    int diff = my_strncmp(string1, string2,n);
+    printf("%d\n", diff);
+
+    free(string1);
+    free(string2);
+
+    return 0;
+
+}
